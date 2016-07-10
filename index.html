@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Hello AngularJS</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    	<script type="text/javascript" src="index.js"></script>
+	</head>
+
+	<body>
+<!--		<div ng-controller="Hello">
+			<p>The ID is {{greeting.id}}</p>
+			<p>The content is {{greeting.content}}</p>
+		</div>
+		<div ng-controller='Sample'>
+			<p ng-repeat='x in myData'> The sample code should be {{x.Name + ',' + .Country}}</p>
+		</div>-->
+		<div ng-app="myApp">
+			<div ng-controller="myCtrl">
+				{{myData}}
+			</div> 
+		</div>
+	</body>
+</html>
