@@ -16,14 +16,32 @@ function Sample($scope, $http){
 
 var app = angular.module('myApp', []);
 //var root = "http://www.w3schools.com/angular/welcome.htm"
-var root = "http://jsonplaceholder.typicode.com/posts/1"
+var roott = "http://jsonplaceholder.typicode.com/posts"
+var roottoo = "http://jsonplaceholder.typicode.com/posts/1"
+
 
 app.controller("myCtrl", function($scope, $http) {
     $http({
         method : "GET",
-        url : root
+        url : roottoo
     }).then(function(response){
         console.log(response.data.userId);
         $scope.myData = response.data.userId;
     });
 });
+
+
+app.controller("myPoster", function($scope, $http){
+    $http({
+        method : "POST",
+        url : roott,
+        data : {
+            userId : "Blacklister",
+            country : "Merica",
+            funnsies : "Guns"
+        }
+    }).then(function(response){
+        console.log("woot!");
+        console.log(response);
+    })
+})

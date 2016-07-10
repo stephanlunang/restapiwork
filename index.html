@@ -15,9 +15,11 @@
 			<p ng-repeat='x in myData'> The sample code should be {{x.Name + ',' + .Country}}</p>
 		</div>-->
 		<div ng-app="myApp">
+			<div ng-controller="myPoster"></div>
 			<div ng-controller="myCtrl">
 				{{myData}}
 			</div> 
+
 		</div>
 	</body>
 </html>
